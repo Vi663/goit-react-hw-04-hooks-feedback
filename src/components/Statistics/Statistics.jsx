@@ -4,8 +4,8 @@ import s from './Statistics.module.css'
 export function Statistics({ statistics, total, positivePercentage }) {
   return (
     <ul className={s.StatsList}>
-      {Object.entries(statistics).map(([stat, value]) => {
-        return statistics.hasOwnProperty(stat) && (
+      {statistics.map(([stat, value]) => {
+        return (
           <li className={s.StatsItem}>{`${stat}: ${value}`}</li>
         )
     })}
